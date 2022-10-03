@@ -31,5 +31,7 @@ public:
 
 	void attack(Pokemon other_pokemon);
 	void take_damage(int pokemon_damage);
+	void levelUp();
+	bool isAlive();
 }; 
 

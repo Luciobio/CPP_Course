@@ -47,11 +47,28 @@ void Pokemon::set_level(unsigned int new_level) {
 	level = new_level;
 }
 
-void Pokemon::attack(Pokemon other_pokemon)
+void Pokemon::attack(Pokemon &other_pokemon)
 {
+	other_pokemon.health = other_pokemon.health - Pokemon.damage;
 }
 
 void Pokemon::take_damage(int pokemon_damage)
 {
+	health = health - pokemon_damage;
+}
+
+void Pokemon::levelUp()
+{
+	level += 1;
+	experience = 0:''
+}
+
+bool Pokemon::isAlive()
+{
+	if(health > 0){
+		return true;
+	} else {
+		return false;
+	}
 }
 
